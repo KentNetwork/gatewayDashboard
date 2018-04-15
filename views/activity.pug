@@ -1,0 +1,23 @@
+extends layout
+
+block styles
+  link(rel='stylesheet', href='https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',integrity='sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==',crossorigin='')
+  style(type='text/css').
+    #mapid {
+      height: 300px;
+    }
+block content
+  main(role='main',class='col-md-9 ml-sm-auto col-lg-10 px-4')
+      div(class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom')
+        h1(class='h2') Gateway Activity
+        div(class='dropdown')
+          button(class='btn btn-secondary dropdown-toggle',type='button',id='dropdownMenuButton',data-toggle='dropdown',aria-haspopup='true',aria-expanded='false') Filter
+          div(class='dropdown-menu',aria-labelledby='dropdownMenuButton')
+            a(class='dropdown-item',href='#') All
+            a(class='dropdown-item',href='#') Another action
+            a(class='dropdown-item',href='#') Something else here
+      div(class='my-4 w-100')
+        iframe(src='https://graph.kent.network/d-solo/U_tMbiWmz/gateway-stats?orgId=1&panelId=8&theme=light',width='100%',height='auto',frameborder='0')      
+      div(class='my-4 w-100')
+        iframe(src='https://graph.kent.network/d-solo/U_tMbiWmz/gateway-stats?orgId=1&panelId=4&theme=light',width='100%',height='400px',frameborder='0')      
+block scripts
