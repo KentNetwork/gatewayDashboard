@@ -1,0 +1,25 @@
+{
+    "meta": {
+        "publisher": "Kent Network",
+        "license": "Creative Commons",
+        "version": "0.1",
+        "resultLimit": 100
+    },
+    "items": [
+        {
+            "gatewayMac": "b827ebfffe3fdb9e",
+            "lat": 51.27755,
+            "lon": 1.07493
+        },
+        {
+            "gatewayMac": "b827ebfffe55c003",
+            "lat": 51.35026,
+            "lon": 1.3501
+        },
+        {
+            "gatewayMac": "b827ebfffe5aa4a7",
+            "lat": 51.1275,
+            "lon": 0.8386
+        }
+    ]
+}

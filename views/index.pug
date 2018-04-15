@@ -23,3 +23,12 @@ block scripts
         id: 'mapbox.outdoors-v9',
         accessToken: 'pk.eyJ1Ijoia2VudG5ldHdvcmsiLCJhIjoiY2pmejB4NXUxNHdoeTMybnZpeTl6enU0aSJ9.3VhMj8SGSOKY9dDS22be1g'
         }).addTo(mymap);
+  script(type='text/javascript').
+   var allMarkers = [];
+    jQuery.get( "javascripts/gateways.json", function( data ) {
+      data.items.forEach(function(entry) {
+        var aMarker = L.marker([entry.lat, entry.lon]).addTo(mymap);
+        aMarker.bindPopup(entry.gatewayMac).openPopup();
+        allMarkers.push(aMarker);
+      });
+    });
